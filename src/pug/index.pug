@@ -1,0 +1,192 @@
+doctype html
+html(lang="cs")
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Martin Štěpánek
+
+        link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
+
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v5.14.0/js/all.js', crossorigin='anonymous')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+    body(class="cs")#page-top
+
+        // Navigation
+        nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+            a.navbar-brand.js-scroll-trigger(href='#page-top')
+                span.d-block.d-lg-none Martin Štěpánek
+                span.d-none.d-lg-block
+                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#about' lang="cs") O mě
+                        //a.nav-link.js-scroll-trigger(href='#about' lang="en") About me
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#experience' lang="cs") Pracovní zkušenosti
+                        //a.nav-link.js-scroll-trigger(href='#experience' lang="en") Experience
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#education' lang="cs") Vzdělání
+                        //a.nav-link.js-scroll-trigger(href='#education' lang="en") Education
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#skills' lang="cs") Znalosti
+                        //a.nav-link.js-scroll-trigger(href='#skills' lang="en") Skills
+                    //li.nav-item
+                    //    select(class="selectpicker" data-width="fit")
+                    //        option
+                    //            img(src="assets/img/gb.svg")
+                    //        option(data-content='<span class="flag-icon flag-icon-mx"></span>') Czech
+
+        // Page Content
+        .container-fluid.p-0
+
+            // About
+            section#about.resume-section
+                .resume-section-content
+                    h1.mb-0
+                        | Martin
+                        span.text-primary Štěpánek
+                    br
+                    - var age =  Math.abs(new Date(Date.now() - new Date(1998,6,10).getTime()).getUTCFullYear() - 1970)
+
+                    p(lang="cs").lead.mb-5
+                        | Ahoj, já jsem Martin a je mi #{age} let. Aktuálně jsem studentem FIT ČVUT.
+                    //p(lang="en").lead.mb-5
+                    //    | Hi, my name is Martin and I`m #{age} years old. Currently I'm student of FIT CTU.
+
+
+                    .social-icons
+                        a.social-icon(href='mailto:martin@stepanek.com')
+                            i.fas.fa-envelope
+                        a.social-icon(href='https://www.linkedin.com/in/martin-%C5%A1t%C4%9Bp%C3%A1nek/')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='https://github.com/wheeeper')
+                            i.fab.fa-github
+                        a.social-icon(href='https://twitter.com/stepanekmart')
+                            i.fab.fa-twitter
+
+            hr.m-0
+
+            // Experience
+            section#experience.resume-section
+                .resume-section-content
+                    h2.mb-5 Pracovní zkušenosti
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Firmware tester
+                            .subheading.mb-3 Siemens
+                            p
+                                | Vytváření testů a podpůrných aplikací.
+                        .flex-shrink-0
+                            span.text-primary Říjen 2019 - Současnost
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Pronajímací agent
+                            .subheading.mb-3 Czechocar s.r.o.
+                            p
+                                | Zprostředkování pronájmů, komunikace se zákazníky.
+                        .flex-shrink-0
+                            span.text-primary Červenec 2018 - Září 2019
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Výzkumný pracovník
+                            .subheading.mb-3 Univerzita J.E.Purkyně
+                            p
+                                | Zhodnocovaní videí pro vývoj systému autonomího řízení pro firmu Valeo.
+                        .flex-shrink-0
+                            span.text-primary Červen 2017 - Září 2017
+
+            hr.m-0
+
+            // Education
+            section#education.resume-section
+                .resume-section-content
+                    h2.mb-5 Vzdělání
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 České vysoké učení technické
+                            .subheading.mb-3 Fakulta informačních technologií
+                            p Student bakalářského studia
+                        .flex-shrink-0
+                            span.text-primary Září 2017 - Současnost
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Gymnázium Josefa Jungmanna
+                            .subheading.mb-3 Všeobecné gymnázium
+                            p Zakončeno maturitní zkouškou
+                        .flex-shrink-0
+                            span.text-primary Září 2013 - Květen 2017
+
+            hr.m-0
+
+            // Skills
+            section#skills.resume-section
+                .resume-section-content
+                    h2.mb-5 Znalosti
+                    .subheading.mb-3 Programovací jazyky a nástroje
+
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Znalost C, C++, Python, Bash, SQL
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Znalost OOP, agile vývoje, Scrum
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Základní znalost PHP, C#
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Úspěšný absolvent kurzu „Database design and programming with SQL“ od Oracle Academy
+
+                    br
+
+                    .subheading.mb-3 Jazyky
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Čeština - materšký jazyk
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Angličtina - plynule slovem i písmem, dosaženo úrovně C1 ve zkoušce TOEIC
+                        li
+                            span.fa-li
+                                i.fas.fa-angle-right
+                            | Nemčina - základy na úrovni porozumění
+
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
